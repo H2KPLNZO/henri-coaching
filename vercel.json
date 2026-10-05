@@ -2,8 +2,17 @@
   "rewrites": [
     {
       "source": "/",
-      "has": [{ "type": "host", "value": "atypik.decapele.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "atypik.decapele.com"
+        }
+      ],
       "destination": "/atypik/index.html"
+    },
+    {
+      "source": "/",
+      "destination": "/henri/index.html"
     }
   ]
 }

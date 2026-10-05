@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "atypik.decapele.com" }],
+      "destination": "/atypik/index.html"
+    }
+  ]
+}

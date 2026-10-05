@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Henri de Capèle — Coach de dirigeants et d'entrepreneurs</title>
-<meta name="description" content="Vous croyez ne plus rien ressentir. Coaching d'entrepreneurs et de dirigeants atypiques — retrouver l'énergie, poser ses limites, respirer.">
-<meta property="og:title" content="Vous croyez ne plus rien ressentir. Vous êtes las.">
+<title>Henri de Capèle — Atypik</title>
+<meta name="description" content="Tu te sens différent ? Atypique ? Coaching d'entrepreneurs et de dirigeants atypiques — retrouver l'énergie, poser ses limites, respirer.">
+<meta property="og:title" content="Tu te sens différent ? Atypique ?">
 <meta property="og:description" content="Pour ceux qui tiennent coûte que coûte — souvent en mode automatique. Un appel de 30 minutes, sans engagement.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://henri.decapele.com/">
+<meta property="og:url" content="https://atypik.decapele.com/">
 <style>
-  @font-face{ font-family:'SpectralL'; src:url('/fonts/Spectral-Light.ttf'); font-weight:300; }
-  @font-face{ font-family:'SpectralL'; src:url('/fonts/Spectral-LightItalic.ttf'); font-weight:300; font-style:italic; }
-  @font-face{ font-family:'SpectralL'; src:url('/fonts/Spectral-Medium.ttf'); font-weight:500; }
-  @font-face{ font-family:'Spray'; src:url('/fonts/Bangers.ttf'); font-weight:100 900; }
+  @font-face{ font-family:'SpectralL'; src:url('/atypik/fonts/Spectral-Light.ttf'); font-weight:300; }
+  @font-face{ font-family:'SpectralL'; src:url('/atypik/fonts/Spectral-LightItalic.ttf'); font-weight:300; font-style:italic; }
+  @font-face{ font-family:'SpectralL'; src:url('/atypik/fonts/Spectral-Medium.ttf'); font-weight:500; }
+  @font-face{ font-family:'Spray'; src:url('/atypik/fonts/RubikSprayPaint.ttf'); font-weight:100 900; }
   :root{
     --fond:#FFFFFF;
     --encre:#241F1A;
@@ -42,13 +42,22 @@
   .hero .inner{ position:relative; }
   h1{
     font-family:'Spray', sans-serif;
-    font-weight:400;
-    letter-spacing:0.04em;
-    font-size:clamp(2.2rem, 6.5vw, 3.6rem);
+    font-weight:900;
+    letter-spacing:0.01em;
+    font-size:clamp(2rem, 6vw, 3.3rem);
     line-height:1.08;
-    color:var(--terra);
+    color:var(--rouge);
+    transform:rotate(-1.5deg);
+    filter:url(#brush);
+    display:flex; flex-direction:column; align-items:flex-start;
     max-width:40rem;
   }
+  .mk{ display:inline-block; padding:0.10em 0.42em; background-size:100% 100%; }
+  .mk1{ background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 80" preserveAspectRatio="none"><path d="M2 10 C 80 2, 190 8, 280 3 C 340 0, 385 5, 398 9 L 395 70 C 320 78, 220 72, 130 78 C 60 81, 15 75, 4 70 Z" fill="%2315110D"/></svg>'); transform:rotate(-1.8deg); }
+  .mk2{ background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 80" preserveAspectRatio="none"><path d="M4 6 C 90 9, 170 2, 270 7 C 340 10, 382 4, 397 7 L 397 73 C 330 69, 230 78, 150 73 C 70 70, 25 78, 3 74 Z" fill="%2315110D"/></svg>'); transform:rotate(1.1deg); margin-top:-0.14em; margin-left:0.9rem; }
+  .mk3{ background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 80" preserveAspectRatio="none"><path d="M3 8 C 60 4, 160 10, 250 4 C 330 0, 380 7, 396 5 L 398 71 C 320 76, 240 70, 140 76 C 70 80, 20 73, 2 75 Z" fill="%2315110D"/></svg>'); transform:rotate(-1deg); margin-top:-0.14em; margin-left:0.2rem; }
+  .mk4{ background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 80" preserveAspectRatio="none"><path d="M5 9 C 100 3, 200 9, 290 4 C 350 1, 388 6, 396 10 L 394 72 C 310 77, 210 71, 120 77 C 55 80, 18 74, 3 71 Z" fill="%2315110D"/></svg>'); transform:rotate(2deg); margin-top:-0.14em; margin-left:1.6rem; }
+  .slash{ position:absolute; filter:url(#brush2); }
   .soustitre{ font-style:italic; font-weight:300; color:var(--doux); margin-top:1.6rem; font-size:1.1875rem; }
   .ouverture{ margin-top:2.4rem; }
   p + p{ margin-top:1.2rem; }
@@ -78,17 +87,18 @@
   .sentence{ margin-top:1.1rem; font-style:italic; font-weight:300; color:#BFE8EF; }
   .parle{ margin-top:1.6rem; display:flex; gap:1.8rem; align-items:flex-start; }
   .parle img{ width:11rem; height:11rem; flex:0 0 auto; border-radius:50%;
-    box-shadow:0 0 0 3px #fff, 0 0 0 5px var(--terra), 0 6px 18px rgba(36,31,26,0.12); }
+    box-shadow:0 0 0 3px #fff, 0 0 0 5px var(--noir), 0 6px 18px rgba(36,31,26,0.12); }
   .certif{ margin-top:1.3rem; color:var(--doux); font-size:1.05rem; }
   .cta{
     display:inline-block; margin-top:1.5rem;
     color:#FFF6E8; font-weight:700; font-size:1.15rem;
     font-family:'Spray', sans-serif; letter-spacing:0.02em;
     text-decoration:none; padding:0.95rem 1.8rem; border-radius:6px;
-    background:linear-gradient(135deg, var(--terra), #A6431F);
-    box-shadow:0 2px 10px rgba(194,74,38,0.35);
+    background:var(--noir);
+    box-shadow:0 2px 10px rgba(21,17,13,0.35);
+    transform:rotate(-1deg);
   }
-  .cta:hover{ background:linear-gradient(135deg, #A6431F, #8F3818); }
+  .cta:hover{ background:#2A231C; }
   .cta:focus-visible, a:focus-visible{ outline:2px solid var(--rouge); outline-offset:3px; }
   .precision{ margin-top:0.9rem; font-size:1rem; color:#FFD9C4; }
   .pied{ padding:2rem 1.25rem 3rem; font-size:0.95rem; color:var(--doux); }
@@ -112,21 +122,23 @@
 </svg>
 
 <section class="band hero band-white"><div class="inner">
-  <h1>Vous croyez ne plus rien ressentir. Vous êtes las.</h1>
-  <p class="soustitre">Pour les dirigeants et entrepreneurs qui tiennent coûte que coûte — souvent en mode automatique.</p>
+  <h1><span class="mk mk1">Tu te sens différent&#8239;?</span><span class="mk mk2">Atypique&#8239;?</span><span class="mk mk3">Tu as l'impression de ne</span><span class="mk mk4">plus rien ressentir&#8239;?</span></h1>
+  <svg class="slash" style="top:-1.2rem; left:-2.2rem; width:5.5rem" viewBox="0 0 90 30" xmlns="http://www.w3.org/2000/svg"><path d="M4 26 C 25 14, 55 8, 86 3 L 84 8 C 56 13, 28 20, 7 29 Z" style="fill:#15110D"/></svg>
+  <svg class="slash" style="top:0.6rem; left:-2.8rem; width:4rem" viewBox="0 0 70 22" xmlns="http://www.w3.org/2000/svg"><path d="M3 19 C 20 11, 42 7, 67 3 L 65 7 C 44 11, 22 16, 5 22 Z" style="fill:#15110D"/></svg>
+  <p class="soustitre">Pour celles et ceux qui tiennent coûte que coûte — souvent en mode automatique.</p>
 
   <div class="ouverture">
     <p>L'envie n'y est plus, et plus grand-chose ne bouge.</p>
-    <p>Vous continuez par habitude, par obligation, par devoir parfois ou simplement parce que vous ne savez pas faire autrement.</p>
-    <p>Vous avez l'impression de ne plus rien vouloir, parfois même de ne plus rien éprouver. D'être devenu un robot, un automate, un maillon.</p>
-    <p>Vous dites oui parce que c'est plus simple, et vous ne savez plus quand vous avez dit un véritable non pour la dernière fois.</p>
-    <p>Vous ne savez plus où vous allez, et les vraies décisions — celles qui sont pour vous — vous pèsent.</p>
+    <p>Tu continues par habitude, par obligation, par devoir — ou parce que tu ne sais pas faire autrement.</p>
+    <p>Tu as l'impression de ne plus rien vouloir, parfois même de ne plus rien éprouver. D'être devenu un robot, un automate, un maillon.</p>
+    <p>Tu dis oui parce que c'est plus simple, et tu ne sais plus quand tu as dit un vrai non pour la dernière fois.</p>
+    <p>Tu ne sais plus où tu vas, et les vraies décisions — celles qui sont pour toi — te pèsent.</p>
     <p>Pourtant, ce que je constate le plus souvent&nbsp;: l'émotion, l'énergie, la passion sont encore là.</p>
     <p>Souvent en veilleuse, sous des couches de «&nbsp;il faut&nbsp;», «&nbsp;je dois&nbsp;», «&nbsp;ce serait bien si&nbsp;», «&nbsp;je serais heureux quand&nbsp;». Elles ne sont plus nommées, c'est tout.</p>
     <p>Et on ne peut piloter que ce qu'on peut nommer.</p>
-    <p>Ce n'est pas un problème de performance. C'est souvent un problème de course à la performance — celle pour laquelle on ignore, on dépasse, on efface ses propres limites, jusqu'à ne plus les (re)connaître.</p>
-    <p>On nous a appris à les cacher, à les traiter comme des faiblesses.</p>
-    <p>Elles sont l'inverse&nbsp;: identifiées, acceptées puis posées, elles libèrent l'espace qui permet à nos forces de s'exprimer pleinement.</p>
+    <p>Ce n'est pas un problème de performance. C'est souvent un problème de course à la performance — celle pour laquelle tu ignores, tu dépasses, tu effaces tes propres limites, jusqu'à ne plus les (re)connaître.</p>
+    <p>On t'a appris à les cacher, à les traiter comme des faiblesses.</p>
+    <p>Elles sont l'inverse&nbsp;: identifiées, acceptées puis posées, elles libèrent l'espace qui permet à tes forces de s'exprimer pleinement.</p>
   </div>
 </div></section>
 
@@ -141,24 +153,24 @@
 
 <section class="band band-petrol"><div class="inner">
   <h2>Comment on y va</h2>
-  <p>Je travaille par et avec les émotions. Pendant mon parcours de certification, on m'a donné un nom&nbsp;: le veilleur — celui qui garde la flamme. C'est ce que je fais en séance&nbsp;: je vous aide à remettre de la lumière sur ce que vous ne regardez plus, en trois temps.</p>
+  <p>Je travaille par et avec les émotions. Pendant mon parcours de certification, on m'a donné un nom&nbsp;: le veilleur — celui qui garde la flamme. C'est ce que je fais en séance&nbsp;: je t'aide à remettre de la lumière sur ce que tu ne regardes plus, en trois temps.</p>
 
   <div class="temps">
     <h3><span class="num">1</span>La retrouver.</h3>
     <p>Le feu n'est pas éteint&nbsp;: petit, faible, parfois en veille mais toujours là.</p>
-    <p>On part de ce que vous ressentez, de ce que vous vivez, pas de ce que vous devriez faire.</p>
-    <p>Sous le besoin d'être accepté, de faire plaisir, de tenir le rôle, il y a une envie qui est la vôtre. Je vous accompagne pour la voir, l'identifier, la nommer.</p>
+    <p>On part de ce que tu ressens, de ce que tu vis, pas de ce que tu devrais faire.</p>
+    <p>Sous le besoin d'être accepté, de faire plaisir, de tenir le rôle, il y a une envie qui est la tienne. Je t'accompagne pour la voir, l'identifier, la nommer.</p>
   </div>
 
   <div class="temps">
     <h3><span class="num">2</span>La protéger du vent.</h3>
-    <p>C'est le cœur du travail. Chaque situation, chaque relation, chaque engagement vous apporte de l'énergie, de la joie — ou vous en coûte. On fait le bilan, poste par poste&nbsp;: déficitaire, neutre, excédentaire. Puis on décide — vous séparer de ce qui coûte, garder ce qui vous enrichit. C'est là que les limites se dessinent, puis se posent, une décision après l'autre. Et la chaleur commence à revenir.</p>
+    <p>C'est le cœur du travail. Chaque situation, chaque relation, chaque engagement t'apporte de l'énergie, de la joie — ou t'en coûte. On fait le bilan, poste par poste&nbsp;: déficitaire, neutre, excédentaire. Puis on décide — te séparer de ce qui coûte, garder ce qui t'enrichit. C'est là que les limites se dessinent, puis se posent, une décision après l'autre. Et la chaleur commence à revenir.</p>
     <p class="sentence">Accepter ses limites, c'est accepter d'être soi-même limité.</p>
   </div>
 
   <div class="temps">
     <h3><span class="num">3</span>Lui donner de l'air.</h3>
-    <p>Les premières limites posées, la flamme peut grandir. C'est le temps de la libération&nbsp;: du souffle, une direction qui est la vôtre, et l'audace d'avancer avec vos forces <em>et</em> vos limites.</p>
+    <p>Les premières limites posées, la flamme peut grandir. C'est le temps de la libération&nbsp;: du souffle, une direction qui est la tienne, et l'audace d'avancer avec tes forces <em>et</em> tes limites.</p>
   </div>
 
   <blockquote class="verbatim">
@@ -169,7 +181,7 @@
 
 <section class="band band-white"><div class="inner">
   <h2>Le cadre</h2>
-  <p>12 séances d'une heure et demie, sur six mois en général — jusqu'à douze selon votre rythme. Un cadre fixe, un contenu qui est le vôtre.</p>
+  <p>12 séances d'une heure et demie, sur six mois en général — jusqu'à douze selon votre rythme. Un cadre fixe, un contenu qui est le tien.</p>
 </div></section>
 
 <section class="band band-white" style="padding-top:0"><div class="inner">
@@ -191,9 +203,9 @@
 
 <section class="band band-terra"><div class="inner">
   <h2>La suite</h2>
-  <p>Un appel de 30 minutes, sans engagement, pour voir si ce travail est le bon pour vous.</p>
+  <p>Un appel de 30 minutes, sans engagement, pour voir si ce travail est le bon pour toi.</p>
   <a class="cta" href="https://bookings.cloud.microsoft/book/HenrideCapleCAPL2@cap-l.fr/">Réserver un créneau</a>
-  <p class="precision">Deux lignes sur votre situation suffisent. Téléphone ou visio, au choix.</p>
+  <p class="precision">Deux lignes sur ta situation suffisent. Téléphone ou visio, au choix.</p>
 </div></section>
 
 <footer class="pied"><div class="inner">
